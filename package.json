@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/Artishoc777/landing_live_streaming#readme",
   "devDependencies": {
-    "parcel": "^2.13.3",
     "sass": "^1.83.4"
   }
 }

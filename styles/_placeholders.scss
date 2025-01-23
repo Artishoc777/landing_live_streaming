@@ -1,0 +1,24 @@
+@use 'variables' as v;
+
+%hover-black{
+    &:hover, &:active {
+        cursor: pointer;
+        color: v.$color_black;
+        transition: 0.15s;
+    }
+}
+
+%hover-black-icon {
+    &:hover, &:active {
+        cursor: pointer;
+        fill: v.$color_black;
+    }
+}
+
+%active-black-icon {
+    &:active {
+        cursor: pointer;
+        fill: v.$color_black;
+    }
+}
+
