@@ -1,3 +1,3 @@
 # Landing page live Streaming
 
-**Используемые технологии:** html5, css3, scss, npm, node.js, parcel
+**Используемые технологии:** html5, css3, scss, npm, node.js
