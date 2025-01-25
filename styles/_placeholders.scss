@@ -1,24 +1,40 @@
 @use 'variables' as v;
+@use 'sass:color';
 
 %hover-black{
     &:hover, &:active {
         cursor: pointer;
-        color: v.$color_black;
+        color: v.$color_light-blue;
         transition: 0.15s;
+    }
+}
+
+%hover-light{
+    &:hover, &:active {
+        cursor: pointer;
+        color: v.$color_white;
+        transition: 0.15s;
+    }
+}
+
+%hover-btn {
+    &:hover, &:active{
+        cursor: pointer;
+        background-color: color.adjust(v.$color_black, $alpha: -0.4);
     }
 }
 
 %hover-black-icon {
     &:hover, &:active {
         cursor: pointer;
-        fill: v.$color_black;
+        fill: v.$color_light-blue;
     }
 }
 
 %active-black-icon {
     &:active {
         cursor: pointer;
-        fill: v.$color_black;
+        fill: v.$color_light-blue;
     }
 }
 
