@@ -38,3 +38,14 @@
     }
 }
 
+%exp-card-hover {
+    &:hover, &:active{
+        cursor: pointer;
+        box-shadow: 0px 4px 38px -8px rgba(0,0,0,0.55);
+        background-color: color.adjust(v.$color-white, $alpha: -0.9);
+        fill: v.$color-white;
+        transition: 0.15s;
+        color: v.$color-white;
+    }
+}
+

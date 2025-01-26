@@ -32,3 +32,8 @@
         #{$left-or-right}: $value2;
     }
 }
+
+@mixin use-size ($width: 40px, $height: 40px){
+    width: $width;
+    height: $height;
+}

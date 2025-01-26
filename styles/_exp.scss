@@ -1,0 +1,129 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+@use "sass:color";
+
+.main__exp{
+    border-bottom: 1px solid v.$color-white;
+}
+
+.exp {
+    max-width: 930px;
+    margin: 0 auto 185px;
+    @include m.d-flex(center, center, wrap, column, 0, 65px);
+
+    &__title {
+        @include m.font(60px, 400, normal, v.$color-white);
+    }
+
+    &__cards {
+        max-width: 930px;
+        height: 460px;
+        @include m.d-flex(center, center, nowrap, column);
+
+        &-item {
+            width: 178px;
+            height: 193px;
+            border-radius: 20px;
+            background-color: color.adjust(v.$color_white, $alpha: -0.85);
+            padding-inline: 12px;
+            @include m.d-flex(center, center, nowrap, column, 0, 12px);
+            @extend %exp-card-hover;
+        }
+        &-list{
+            @include m.d-flex(space-around, center, wrap, row, 197px, 68px);
+        }
+        &-icon {
+            @include m.use-size(50px, 50px);
+        }
+
+        &-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+
+        &-text {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        .card-integration {
+            padding-top: 20px;
+        }
+
+        @media(max-width: v.$media-l){
+            &-list {
+                @include m.d-flex(space-around, center, wrap, row, 100px, 68px);
+            }
+        }
+
+        @media(max-width: v.$media-s){
+            &-list{
+                @include m.d-flex(space-around, center, wrap, row, 20px, 35px);
+            }
+        }
+
+        @media(max-width: v.$media-xs){
+            &-item {
+                width: 140px;
+                height: 150px;
+                background-color: color.adjust(v.$color_white, $alpha: -0.85);
+                @include m.d-flex(center, center, nowrap, column, 0, 10px);
+            }
+
+            &-icon {
+                @include m.use-size(40px, 40px);
+            }
+
+            &-title {
+                font-size: 14px;
+            }
+
+            &-text {
+                font-size: 12px;
+            }
+        }
+    }
+
+    @media(max-width: v.$media-m){
+        &__cards {
+            height: 760px;
+            max-width: 576px;
+        }
+    }
+
+    @media(max-width: v.$media-s){
+        &__cards {
+            height: 660px;
+        }
+    }
+
+    @media(max-width: v.$media-xs){
+        &__cards {
+            height: 530px;
+        }
+
+        &__title {
+            @include m.font(45px, 400, normal, v.$color-white);
+        }
+    }
+}
+
+@media(max-width: v.$media-l){
+    .exp{
+        margin-top: 120px;
+    }
+}
+
+@media(max-width: v.$media-m){
+    .exp{
+        margin-block: 80px;
+    }
+}
+
+@media(max-width: v.$media-xs){
+    .exp{
+        margin-block: 40px;
+    }
+}

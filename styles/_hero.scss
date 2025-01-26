@@ -215,7 +215,7 @@
     }
 
     &__scroll {
-        @include m.position(absolute, 1, -1, top, left, 600px, 30px);
+        @include m.position(absolute, 1, -1, top, left, 560px, 30px);
 
         &-content {
             position: relative;
@@ -243,6 +243,12 @@
 
         @media(max-width: v.$media-xs){
             @include m.position(absolute, 1, -1, top, left, 480px, 5px);
+        }
+    }
+
+    @media(max-width: v.$media_l){
+        &__notify {
+            margin: 110px auto 0;
         }
     }
 
