@@ -1,4 +1,4 @@
 # Landing page live Streaming
 
-**Technologies used:** html5, css3, scss, npm, node.js <br>
-**[Go to website](https://artishoc777.github.io/landing_live_streaming/)**
+**[Go to website](https://artishoc777.github.io/landing_live_streaming/)** <br>
+**Technologies used:** html5, css3, scss, npm, node.js
