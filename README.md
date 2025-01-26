@@ -1,3 +1,4 @@
 # Landing page live Streaming
 
-**Используемые технологии:** html5, css3, scss, npm, node.js
+**Technologies used:** html5, css3, scss, npm, node.js
+**[Go to website](https://artishoc777.github.io/landing_live_streaming/)**
