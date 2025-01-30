@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -28,7 +29,7 @@ li {
 
 .header .nav__title-link:hover, .header .nav__links .list__item-link:hover, .header .nav .covid__link:hover, .header .nav__title-link:active, .header .nav__links .list__item-link:active, .header .nav .covid__link:active {
   cursor: pointer;
-  color: #c0e1ff;
+  color: #d4d9e6;
   transition: 0.15s;
 }
 
@@ -45,12 +46,12 @@ li {
 
 .header .nav .globe__link-icon:hover, .header .nav .globe__link-icon:active {
   cursor: pointer;
-  fill: #c0e1ff;
+  fill: #d4d9e6;
 }
 
 .header .nav .burger__btn-icon:active {
   cursor: pointer;
-  fill: #c0e1ff;
+  fill: #d4d9e6;
 }
 
 .exp__cards-item:hover, .exp__cards-item:active {
@@ -60,6 +61,29 @@ li {
   fill: #fff;
   transition: 0.15s;
   color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px; /* ширина для вертикального скролла */
+  height: 10px; /* высота для горизонтального скролла */
+}
+
+/* Стили для ползунка (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #678FF2; /* Цвет ползунка */
+  border-radius: 5px; /* Закругления */
+  border: 2px solid #d4d9e6; /* Добавить отступы для ползунка */
+}
+
+/* Стили для трека (track) */
+::-webkit-scrollbar-track {
+  background-color: #d4d9e6; /* Цвет трека */
+  border-radius: 5px; /* Закругления */
+}
+
+/* Стили при наведении мыши на ползунок */
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(7.0909090909, 28.9090909091, 82.9090909091); /* Более тёмный цвет на ховер */
 }
 
 .header {
@@ -746,6 +770,306 @@ li {
     margin-block: 40px;
   }
 }
+.main__about {
+  border-bottom: 1px solid #fff;
+  padding: 140px 0 0 0;
+}
+.main__about .about {
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 130px;
+}
+.main__about .about__quality {
+  width: 100%;
+  height: 400px;
+  padding: 0 0 0 15px;
+  background-image: url("../assets/img/desktop_alpha.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100%;
+}
+.main__about .about__quality-title {
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+.main__about .about__quality-desc {
+  max-width: 590px;
+  line-height: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .main__about .about__quality {
+    background: linear-gradient(180deg, rgb(103, 143, 242) 0%, rgba(103, 143, 242, 0) 74%), url("../assets/img/desktop_alpha.webp") 90% 45%/500px no-repeat;
+  }
+}
+@media (max-width: 768px) {
+  .main__about .about__quality {
+    background: url("../assets/img/desktop_alpha.webp") 99% 100%/450px no-repeat;
+  }
+  .main__about .about__quality-title {
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+  .main__about .about__quality-desc {
+    line-height: 25px;
+    margin-top: 10px;
+    max-width: 500px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .main__about .about__quality {
+    background: url("../assets/img/desktop_alpha.webp") 150px 100%/400px no-repeat;
+  }
+  .main__about .about__quality-desc {
+    margin-top: 10px;
+    max-width: 320px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+  }
+}
+.main__about .about__touch {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  padding: 0 15px 0 15px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 20px;
+}
+.main__about .about__touch::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  transform: rotate(15deg);
+  background-image: url("../assets/img/phone_alpha.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: -400px;
+}
+@media (max-width: 1200px) {
+  .main__about .about__touch::before {
+    scale: 0.8;
+  }
+}
+@media (max-width: 992px) {
+  .main__about .about__touch::before {
+    rotate: 25deg;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -330px;
+  }
+}
+@media (max-width: 768px) {
+  .main__about .about__touch::before {
+    rotate: 55deg;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -260px;
+  }
+}
+@media (max-width: 576px) {
+  .main__about .about__touch::before {
+    scale: 1.1;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -160px;
+  }
+}
+@media (max-width: 428px) {
+  .main__about .about__touch::before {
+    height: 70%;
+    scale: 1.2;
+    position: absolute;
+    z-index: -1;
+    top: 60px;
+    left: -100px;
+  }
+}
+.main__about .about__touch-title {
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+.main__about .about__touch-desc {
+  margin-top: 10px;
+  text-align: right;
+  line-height: 30px;
+  max-width: 480px;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .main__about .about__touch {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .main__about .about__touch-title {
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+  .main__about .about__touch-desc {
+    line-height: 25px;
+    max-width: 320px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .main__about .about__touch {
+    margin-top: 140px;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+.main__about .about__approach {
+  width: 100%;
+  height: 850px;
+  padding: 0 0 0 15px;
+  margin-top: 150px;
+  background-image: url("../assets/img/cactus_alpha.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 100%;
+}
+.main__about .about__approach-title {
+  margin-top: 150px;
+  font-size: 45px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+.main__about .about__approach-desc {
+  max-width: 730px;
+  line-height: 30px;
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: normal;
+  color: #fff;
+}
+@media (max-width: 1200px) {
+  .main__about .about__approach {
+    height: 650px;
+  }
+}
+@media (max-width: 992px) {
+  .main__about .about__approach {
+    height: 500px;
+  }
+  .main__about .about__approach-desc {
+    max-width: 500px;
+  }
+  .main__about .about__approach-desc br {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .main__about .about__approach {
+    height: 450px;
+  }
+  .main__about .about__approach-desc {
+    margin-top: 10px;
+    max-width: 350px;
+    line-height: 25px;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    color: #fff;
+  }
+  .main__about .about__approach-title {
+    margin-top: 150px;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+}
+@media (max-width: 576px) {
+  .main__about .about__approach {
+    height: 650px;
+    background-image: url("../assets/img/cactus_alpha.webp");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: 100% 100%;
+  }
+  .main__about .about__approach-title {
+    margin-top: 0;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+}
+@media (max-width: 428px) {
+  .main__about .about__approach {
+    height: 510px;
+    background-image: url("../assets/img/cactus_alpha.webp");
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position: 100% 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .main__about .about {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 0;
+  }
+}
+
 body {
   background-color: #678FF2;
 }

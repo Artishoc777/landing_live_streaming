@@ -1,0 +1,25 @@
+@use 'variables' as v;
+@use "sass:color";
+
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 10px; /* высота для горизонтального скролла */
+  }
+  
+  /* Стили для ползунка (thumb) */
+  ::-webkit-scrollbar-thumb {
+    background-color: v.$color_blue; /* Цвет ползунка */
+    border-radius: 5px; /* Закругления */
+    border: 2px solid v.$color_light-blue; /* Добавить отступы для ползунка */
+  }
+  
+  /* Стили для трека (track) */
+  ::-webkit-scrollbar-track {
+    background-color: v.$color_light-blue; /* Цвет трека */
+    border-radius: 5px; /* Закругления */
+  }
+  
+  /* Стили при наведении мыши на ползунок */
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: darken(v.$color_blue, 50%); /* Более тёмный цвет на ховер */
+  }
