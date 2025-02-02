@@ -63,6 +63,17 @@ li {
   color: #fff;
 }
 
+.main__experience .experience__card:hover, .main__experience .experience__card:active {
+  background-color: rgba(76.5, 76.5, 76.5, 0.1);
+  box-shadow: 0px 20px 38px -8px rgba(0, 0, 0, 0.55);
+  transition: 0.15s;
+}
+
+.main__experience .experience__card-btn:hover, .main__experience .experience__card-btn:active {
+  scale: 1.3;
+  transition: 0.15s;
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* ширина для вертикального скролла */
   height: 10px; /* высота для горизонтального скролла */
@@ -1067,6 +1078,98 @@ li {
     flex-direction: column;
     column-gap: 0;
     row-gap: 0;
+  }
+}
+
+.main__experience .experience {
+  padding: 100px 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 90px;
+}
+.main__experience .experience__title {
+  font-size: 60px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+}
+@media (max-width: 428px) {
+  .main__experience .experience__title {
+    font-size: 45px;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
+  }
+}
+.main__experience .experience__cards-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 20px;
+  row-gap: 55px;
+  width: 100%;
+  padding-inline: 15px;
+}
+.main__experience .experience__card {
+  width: 320px;
+  height: 295px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  position: relative;
+}
+.main__experience .experience__card-title {
+  height: 83px;
+  font-size: 23px;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 0;
+}
+.main__experience .experience__card-title span {
+  display: block;
+}
+.main__experience .experience__card-btn {
+  width: 144px;
+  height: 83px;
+  border-radius: 30px;
+  transform: rotate(10deg);
+  border: 0px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  bottom: -20px;
+  left: -50px;
+}
+.main__experience .experience__card-btn-icon {
+  width: 35px;
+  height: 22px;
+  transform: rotate(-10deg);
+  margin-left: 50px;
+  margin-bottom: 20px;
+}
+@media (max-width: 428px) {
+  .main__experience .experience {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 50px;
   }
 }
 
