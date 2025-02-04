@@ -1,6 +1,6 @@
 @use "variables" as v;
 
-@mixin d-flex ($justify: center ,$align: center, $wrap: nowrap, $direction: row, $c-gap: 0, $r-gap: 0){
+@mixin d-flex ($justify: center, $align: center, $wrap: nowrap, $direction: row, $c-gap: 0, $r-gap: 0){
     display: flex;
     justify-content: $justify;
     align-items: $align;

@@ -1,0 +1,132 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+@use "sass:color";
+
+.testimonials {
+    padding-top: 100px;
+    margin: 0 auto 50px;
+
+    @include m.d-flex(start, center, nowrap, column, 0, 70px);
+
+    &__title {
+        @include m.font(60px, 400, normal, v.$color_white);
+
+        @media (max-width: v.$media-s) {
+            @include m.font(45px, 400, normal, v.$color_white);
+        }
+    }
+
+    &__slider {
+        @include m.d-flex(center, center, nowrap, column, 0, 0px);
+
+        .testimonials__btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            rotate: 45deg;
+            border: 0px;
+            background-color: color.adjust(v.$color_white, $alpha: -0.85);
+            @extend %testimonials-btn-hover;
+
+            &-wrapper {
+                @include m.d-flex(center, center, nowrap, row, 600px, 0);
+                position: relative;
+                top: -200px;
+
+                @media (max-width: v.$media-s) {
+                    top: 0px;
+                    @include m.d-flex(center, center, nowrap, row, 300px, 0);
+                }
+            }
+
+            &-icon {
+                width: 35px;
+                height: 22px;
+                fill: v.$color_white;
+            }
+
+            @media (max-width: v.$media-s){
+            
+            }
+        }
+
+        #test_left_button-icon {
+            rotate: 135deg;
+        }
+
+        #test_right_button-icon {
+            rotate: -45deg;
+        }
+
+        .testimonials__card {
+            width: 500px;
+            height: 280px;
+            border-radius: 20px;
+            background: {
+                image: url(../assets/img/card-clip-path.svg);
+                position: center;
+                repeat: no-repeat;
+            }
+            
+            @include m.d-flex(start, start, nowrap, column, 0, 35px);
+
+            &-img {
+                margin: 20px 0 0 20px;
+            }
+            
+            &-quote {
+                max-width: 400px;
+                margin: 0 auto;
+                @include m.font(20px, 400, normal, v.$color_white);
+                line-height: 26px;
+            }
+        }
+
+        @media (max-width: v.$media-m){
+            scale: 0.73;
+        }
+
+        @media (max-width: v.$media-s){ 
+            scale: 0.58;
+            @include m.d-flex(center, center, nowrap, column, 0, 40px);
+        }
+    }
+
+    &__points {
+        @include m.d-flex(center, center, nowrap, row, 10px);
+
+        &-item {
+            width: 13px;
+            height: 13px;
+            border-radius: 50%;
+            background-color: v.$color_white;
+            @extend %testiomonials-points-hover;
+        }
+
+        .selected{
+            width: 10px;
+            height: 10px;
+            background-color: darken(v.$color_white, 40%);
+
+            @extend %testiomonials-points-hover-select;
+        }
+
+        @media (max-width: v.$media-m){
+            margin-top: -10px;
+        }
+
+        @media (max-width: v.$media-s) {
+            margin-top: -115px;
+        }
+    }
+
+    @media (max-width: v.$media-m){
+        padding-top: 40px;
+        @include m.d-flex(start, center, nowrap, column, 0, 30px);
+    }
+
+    @media (max-width: v.$media-s){
+        @include m.d-flex(start, center, nowrap, column, 0, 0);
+    }
+}

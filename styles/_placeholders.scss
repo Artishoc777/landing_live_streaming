@@ -64,3 +64,24 @@
     }
 }
 
+%testimonials-btn-hover {
+    &:hover, &:active {
+        transition-duration: 0.15s;
+        background-color: darken(color.adjust(v.$color_white, $alpha: -0.85), 15%);
+    }
+}
+
+%testiomonials-points-hover {
+    &:hover, &:active {
+        transition-duration: 0.15s;
+        background-color: darken(v.$color-white, 15%);
+    }
+}
+
+%testiomonials-points-hover-select {
+    &:hover, &:active {
+        transition-duration: 0.15s;
+        background-color: darken(v.$color-white, 50%);
+    }
+}
+
