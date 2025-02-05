@@ -89,6 +89,33 @@ li {
   background-color: rgb(127.5, 127.5, 127.5);
 }
 
+.main__form-bg-cloud {
+  width: 700px;
+  height: 240px;
+  background-image: url("../assets/img/cloud_alpha.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.main__form .form__wrapper .form__name, .main__form .form__wrapper .form__email, .main__form .form__wrapper .form__text {
+  width: 100%;
+  height: 47px;
+  border-radius: 20px;
+  border: 1px solid #999999;
+  padding: 0 1em;
+  font-size: 25px;
+  font-weight: 400;
+  font-style: normal;
+  color: #000;
+}
+.main__form .form__wrapper .form__name::placeholder, .main__form .form__wrapper .form__email::placeholder, .main__form .form__wrapper .form__text::placeholder {
+  font-size: 25px;
+  font-weight: 100;
+  font-style: normal;
+  color: #999999;
+}
+
 ::-webkit-scrollbar {
   width: 10px; /* ширина для вертикального скролла */
   height: 10px; /* высота для горизонтального скролла */
@@ -1267,6 +1294,7 @@ li {
 .testimonials__slider .testimonials__card {
   width: 500px;
   height: 280px;
+  margin-inline: 20px;
   border-radius: 20px;
   background-image: url(../assets/img/card-clip-path.svg);
   background-position: center;
@@ -1359,6 +1387,100 @@ li {
     flex-direction: column;
     column-gap: 0;
     row-gap: 0;
+  }
+}
+
+.main__form {
+  padding: 180px 15px;
+  position: relative;
+  margin-top: 130px;
+  overflow: hidden;
+}
+.main__form .form__wrapper {
+  width: 100%;
+  height: 360px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  column-gap: 0;
+  row-gap: 0;
+}
+.main__form .form__wrapper .form {
+  width: min(625px, 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  column-gap: 0;
+  row-gap: 23px;
+}
+.main__form .form__wrapper .form__title {
+  margin-bottom: 20px;
+  font-size: 36px;
+  font-weight: 400;
+  font-style: #000;
+  color: #000;
+}
+.main__form .form__wrapper .form__submit-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 20px;
+  border: none;
+  background-color: #000;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+}
+.main__form .form__wrapper .form__submit-btn:hover {
+  opacity: 0.8;
+  transition: 0.15s;
+}
+@media (max-width: 768px) {
+  .main__form .form__wrapper .form__title {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: 400;
+    font-style: #000;
+    color: #000;
+  }
+  .main__form .form__wrapper .form__name, .main__form .form__wrapper .form__email, .main__form .form__wrapper .form__text {
+    font-size: 18px;
+    font-weight: 400;
+    font-style: #000;
+    color: #000;
+  }
+  .main__form .form__wrapper .form__name::placeholder, .main__form .form__wrapper .form__email::placeholder, .main__form .form__wrapper .form__text::placeholder {
+    font-size: 18px;
+    font-weight: 100;
+    font-style: normal;
+    color: rgb(127.5, 127.5, 127.5);
+  }
+}
+.main__form .cloud--left {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: -350px;
+}
+.main__form .cloud--right {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -350px;
+}
+@media (max-width: 768px) {
+  .main__form {
+    margin-top: 0;
+  }
+  .main__form-bg-cloud {
+    scale: 0.55;
   }
 }
 

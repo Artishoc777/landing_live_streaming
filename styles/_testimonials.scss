@@ -45,10 +45,6 @@
                 height: 22px;
                 fill: v.$color_white;
             }
-
-            @media (max-width: v.$media-s){
-            
-            }
         }
 
         #test_left_button-icon {
@@ -62,6 +58,7 @@
         .testimonials__card {
             width: 500px;
             height: 280px;
+            margin-inline: 20px;
             border-radius: 20px;
             background: {
                 image: url(../assets/img/card-clip-path.svg);
