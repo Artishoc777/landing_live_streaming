@@ -1,3 +1,5 @@
+@use "variables" as v;
+
 * {
     box-sizing: border-box;
 }
@@ -5,6 +7,11 @@
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
+}
+
+*::selection {
+    background-color: v.$color_light-blue;
+    color: v.$color_blue;
 }
 
 h1, h2, h3, h4, h5, h6, ul, p, button {

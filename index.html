@@ -42,11 +42,32 @@
                 </div>
 
                 <div class="nav__burger burger">
-                    <a href="#" class="burger__btn" aria-label="link">
+                    <label for="burger-input" class="burger__btn">
                         <svg class="burger__btn-icon" aria-label="burger button">
                             <use href="assets/sprites.svg#burger-icon"></use>
                         </svg>
-                    </a>
+                    </label>
+                    <input class="burger__btn-input" type="checkbox" id="burger-input">
+
+                    <div class="nav__burger-menu">
+                        <ul class="nav__burger-menu-links">
+                            <li class="nav__burger-menu-links-item">
+                                <a href="#" onclick="document.getElementById('burger-input').checked = false;" aria-label="about mobile link">about</a>
+                            </li>
+                            <li class="nav__burger-menu-links-item">
+                                <a href="#" onclick="document.getElementById('burger-input').checked = false;" aria-label="contact mobile link">contact</a>
+                            </li>
+                            <li class="nav__burger-menu-links-item">
+                                <a href="#" onclick="document.getElementById('burger-input').checked = false;" aria-label="update mobile link">COVID-19 UPDATE</a>
+                            </li>
+                        </ul>
+
+                        <label for="burger-input" class="nav__burger-menu-exit">
+                            <svg class="nav__burger-menu-cross" aria-label="cross icon">
+                                <use href="assets/sprites.svg#cross-icon"></use>
+                            </svg>
+                        </label>
+                    </div>
                 </div>
             </nav>
         </div>

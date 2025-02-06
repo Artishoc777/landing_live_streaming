@@ -33,7 +33,6 @@
 
                 span {
                     font-weight: 700;
-                    ;
                 }
 
                 @extend %hover-black;
@@ -129,6 +128,54 @@
             @include m.d-flex(end, center);
 
             display: none;
+
+            &__btn-input {
+                display: none;
+            }
+
+            &__btn-input:checked + .nav__burger-menu {
+                visibility: visible;
+                translate: 0 0;
+            }
+
+            .nav__burger-menu {
+                visibility: hidden;
+                inset: 0;
+                position: fixed;
+                z-index: 2;
+                translate: 100% 0;
+                transition: 0.4s;
+                background-color: v.$color_blue;
+
+                @include m.d-flex(space-between, start, nowrap, row, 0, 0);
+
+                &-links {
+                    margin: 30px;
+                    @include m.d-flex(center, start, nowrap, column, 0, 60px);
+
+                    &-item {
+                        @include m.font(40px, 400, normal, v.$color-white);
+                        @extend %hover-black;
+                    }
+                }
+
+                &-exit {
+                    width: 50px;
+                    height: 50px;
+                    margin-top: 30px;
+                    margin-right: 30px;
+                    @include m.d-flex(center, center);
+                }
+
+                &-cross {
+                    width: 23px;
+                    height: 23px;
+                    scale: 1.5;
+                    fill: v.$color-white;
+                    
+                    @extend %hover-black-icon;
+                }
+            }
 
             &__btn {
                 @include m.d-flex(center, center);
