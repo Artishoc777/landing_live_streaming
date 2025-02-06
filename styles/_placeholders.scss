@@ -29,6 +29,7 @@
     &:hover, &:active {
         cursor: pointer;
         fill: v.$color_light-blue;
+        transition: 0.15s;
     }
 }
 

@@ -1,0 +1,61 @@
+@use "variables" as v;
+@use "mixins" as m;
+@use "placeholders";
+@use "sass:color";
+
+.footer {
+    width: 100%;
+    height: 135px;
+    margin: 0 auto;
+    background-color: color.adjust(v.$color_white, $alpha: -0.85);
+    @include m.d-flex(center, center, nowrap, row, 0, 0);
+
+    .container {
+        width: 1448px;
+    }
+
+    .wrapper {
+        max-width: 1168px;
+        margin: 0 auto;
+        @include m.d-flex(space-between, center, nowrap, row, 50px, 0);
+
+        &__text {
+            margin-left: 15px;
+            @include m.d-flex(center, start, nowrap, column, 0, 5px);
+
+            &-links {
+                @include m.font(22px, 400, normal, v.$color_white);
+                @include m.d-flex(center, center, nowrap, row, 25px, 0);
+            }
+
+            &-item {
+                @extend %hover-black;
+            }
+
+            &-coop {
+                @include m.font(14px, 300, normal, v.$color_white);
+            }
+        }
+
+        &__icons {
+            margin-right: 15px;
+            @include m.d-flex(center, center, nowrap, row, 43px, 0);
+
+            &-link {
+                width: 25px;
+                height: 22px;
+            }
+
+            &-icon {
+                width: 25px;
+                height: 22px;
+                fill: v.$color_white;
+                @extend %hover-black-icon;
+            }
+        }
+
+        @media(max-width: v.$media-s) {
+            @include m.d-flex(center, center, nowrap, column-reverse, 0, 20px);
+        }
+    }
+}
